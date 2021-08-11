@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_14"
+    android:paddingRight="@dimen/dp_10"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/headIv"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/icon_null" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/c_001A2B"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toRightOf="@+id/headIv" />
+
+    <TextView
+        android:id="@+id/tagTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:background="@drawable/shape_white_0071bc_7"
+        android:paddingLeft="@dimen/dp_6"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingRight="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_1"
+        android:textColor="@color/c_0071BC"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/nameTv"
+        app:layout_constraintLeft_toRightOf="@+id/nameTv"
+        app:layout_constraintTop_toTopOf="@+id/nameTv" />
+
+    <TextView
+        android:id="@+id/specialtyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textColor="@color/c_8C9AA3"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/headIv"
+        app:layout_constraintLeft_toRightOf="@+id/headIv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

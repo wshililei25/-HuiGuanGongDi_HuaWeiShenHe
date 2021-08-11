@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints">
+
+    <com.huiguangongdi.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isShowLine="true"
+        app:rightText=""
+        app:title="@string/project_member" />
+
+    <TextView
+        android:id="@+id/member_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_20"
+        android:text="@string/member_role"
+        android:textColor="@color/c_8C9AA3"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="@+id/addApplyV"
+        app:layout_constraintTop_toTopOf="@+id/addApplyV" />
+
+    <ImageView
+        android:id="@+id/memberPermissionIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:src="@mipmap/icon_explain"
+        app:layout_constraintBottom_toBottomOf="@+id/addApplyV"
+        app:layout_constraintLeft_toRightOf="@+id/member_permission"
+        app:layout_constraintTop_toTopOf="@+id/addApplyV" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addApplyV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_26"
+        android:layout_marginRight="@dimen/dp_20"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar">
+
+        <TextView
+            android:layout_width="@dimen/dp_97"
+            android:layout_height="@dimen/dp_27"
+            android:background="@drawable/shape_ffefeb_16"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_9"
+            android:text="@string/add_apply"
+            android:textColor="@color/c_FF673D"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/numberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_oval_ff673d_27"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@+id/addApplyV"
+        app:layout_constraintVertical_weight="1" />
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:layout_marginLeft="@dimen/dp_26"
+        android:layout_marginRight="@dimen/dp_26"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:background="@drawable/shape_0071bc_12"
+        android:gravity="center"
+        android:text="@string/add_member"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

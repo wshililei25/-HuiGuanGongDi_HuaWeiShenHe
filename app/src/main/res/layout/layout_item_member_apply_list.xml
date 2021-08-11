@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_18"
+    android:layout_marginBottom="@dimen/dp_18"
+    android:paddingLeft="@dimen/dp_20"
+    android:paddingRight="@dimen/dp_20"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/headIv"
+        android:layout_width="@dimen/dp_46"
+        android:layout_height="@dimen/dp_46"
+        android:src="@mipmap/icon_null" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:textColor="@color/c_001A2B"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintLeft_toRightOf="@+id/headIv" />
+
+    <TextView
+        android:id="@+id/companyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:textColor="@color/c_8C9AA3"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@+id/headIv"
+        app:layout_constraintLeft_toRightOf="@+id/headIv" />
+
+    <TextView
+        android:id="@+id/refuseTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@drawable/shape_white_ff673d_8"
+        android:paddingLeft="@dimen/dp_14"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="@string/refuse"
+        android:textColor="@color/c_FF673D"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@+id/headIv"
+        app:layout_constraintRight_toLeftOf="@+id/agreeTv"
+        app:layout_constraintTop_toTopOf="@+id/headIv" />
+
+    <TextView
+        android:id="@+id/agreeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_0071bc_8"
+        android:paddingLeft="@dimen/dp_14"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="@string/agree"
+        android:textColor="@color/c_0071BC"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@+id/headIv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headIv" />
+
+    <TextView
+        android:id="@+id/reasonTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/shape_f5fafd_7"
+        android:paddingLeft="@dimen/dp_18"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingRight="@dimen/dp_18"
+        android:paddingBottom="@dimen/dp_16"
+        android:textColor="@color/c_001A2B"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintTop_toBottomOf="@+id/headIv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints">
+
+    <com.huiguangongdi.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isShowLine="true"
+        app:rightText="@string/generating_reports"
+        app:title="@string/security_management" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar">
+
+        <TextView
+            android:id="@+id/allTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_arrow_under"
+            android:drawablePadding="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_18"
+            android:paddingBottom="@dimen/dp_18"
+            android:text="@string/all"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/companyTv" />
+
+        <TextView
+            android:id="@+id/companyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_arrow_under"
+            android:drawablePadding="@dimen/dp_4"
+            android:ellipsize="end"
+            android:maxLength="5"
+            android:paddingTop="@dimen/dp_18"
+            android:paddingBottom="@dimen/dp_18"
+            android:text="@string/dealer_company"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintLeft_toRightOf="@+id/allTv"
+            app:layout_constraintRight_toLeftOf="@+id/professionTv" />
+
+        <TextView
+            android:id="@+id/professionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_arrow_under"
+            android:drawablePadding="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_18"
+            android:paddingBottom="@dimen/dp_18"
+            android:text="@string/profession"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintLeft_toRightOf="@+id/companyTv"
+            app:layout_constraintRight_toLeftOf="@+id/dateTv" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_arrow_under"
+            android:drawablePadding="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_18"
+            android:paddingBottom="@dimen/dp_18"
+            android:text="@string/time_screening"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintLeft_toRightOf="@+id/professionTv"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topV"
+        app:layout_constraintVertical_weight="1" />
+
+    <ImageView
+        android:id="@+id/createIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_21"
+        android:layout_marginBottom="@dimen/dp_37"
+        android:src="@mipmap/icon_creat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

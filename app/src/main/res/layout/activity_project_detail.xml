@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.ProjectDetailActivity"
+    tools:ignore="MissingConstraints">
+
+    <com.huiguangongdi.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isShowLine="true"
+        app:rightText=""
+        app:title="@string/project_detail" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/projectNameV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/project_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_24"
+                    android:paddingBottom="@dimen/dp_24"
+                    android:text="@string/project_name"
+                    android:textColor="@color/c_8C9AA3"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/projectNameEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:hint="@string/please_input_project_name"
+                    android:textColor="@color/c_001A2B"
+                    android:textColorHint="@color/c_8C9AA3"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/project_name"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintLeft_toRightOf="@+id/project_name"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/project_name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/projectNameV" />
+
+            <TextView
+                android:id="@+id/project_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_24"
+                android:text="@string/project_id"
+                android:textColor="@color/c_8C9AA3"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+            <TextView
+                android:id="@+id/projectIdTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/c_001A2B"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/project_id"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/project_id" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/project_id" />
+
+            <TextView
+                android:id="@+id/project_creater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_24"
+                android:text="@string/project_creater"
+                android:textColor="@color/c_8C9AA3"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+            <TextView
+                android:id="@+id/projectCreaterTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textColor="@color/c_001A2B"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/project_creater"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/project_creater" />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/project_creater" />
+
+            <TextView
+                android:id="@+id/project_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_24"
+                android:text="@string/project_describe"
+                android:textColor="@color/c_8C9AA3"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+            <EditText
+                android:id="@+id/projectDescribeEt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="right"
+                android:textColor="@color/c_001A2B"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/project_describe"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/project_describe"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/project_describe" />
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/project_describe" />
+
+            <TextView
+                android:id="@+id/owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_24"
+                android:text="@string/owner"
+                android:textColor="@color/c_8C9AA3"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+            <EditText
+                android:id="@+id/ownerEt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="right"
+                android:textColor="@color/c_001A2B"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/owner"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/owner"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/owner" />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/owner" />
+
+            <TextView
+                android:id="@+id/company_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_24"
+                android:text="@string/company_address"
+                android:textColor="@color/c_8C9AA3"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@+id/line5" />
+
+            <EditText
+                android:id="@+id/companyAddressEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@null"
+                android:enabled="false"
+                android:gravity="right"
+                android:textColor="@color/c_001A2B"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/company_address"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/company_address"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/company_address" />
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/company_address" />
+
+            <TextView
+                android:id="@+id/contact_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_24"
+                android:text="@string/contact_way"
+                android:textColor="@color/c_8C9AA3"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintTop_toBottomOf="@+id/line6" />
+
+            <TextView
+                android:id="@+id/contactWayTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:gravity="right"
+                android:textColor="@color/c_001A2B"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/contact_way"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/contact_way"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/contact_way" />
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/contact_way" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/participationProjectCompaniesV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintTop_toBottomOf="@+id/line7">
+
+                <TextView
+                    android:id="@+id/participation_project_companies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:text="@string/participation_project_companies"
+                    android:textColor="@color/c_8C9AA3"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/participationProjectCompaniesIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:src="@mipmap/icon_more_right"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/participation_project_companies"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/participation_project_companies" />
+
+                <TextView
+                    android:id="@+id/participationProjectCompaniesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_12"
+                    android:paddingRight="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_24"
+                    android:textColor="@color/c_001A2B"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintTop_toBottomOf="@+id/participation_project_companies" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/participationProjectCompaniesV" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/specialtyV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                app:layout_constraintTop_toBottomOf="@+id/line8">
+
+                <TextView
+                    android:id="@+id/profession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:text="@string/profession"
+                    android:textColor="@color/c_8C9AA3"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/specialtyIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:src="@mipmap/icon_more_right"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/profession"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/profession" />
+
+                <TextView
+                    android:id="@+id/specialtyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_12"
+                    android:paddingRight="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_24"
+                    android:textColor="@color/c_001A2B"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintTop_toBottomOf="@+id/profession" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/line9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.5"
+                android:background="@color/c_line"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/specialtyV" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/membersNumV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_24"
+                android:paddingBottom="@dimen/dp_24"
+                app:layout_constraintTop_toBottomOf="@+id/line9">
+
+                <TextView
+                    android:id="@+id/team_members"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:text="@string/team_members"
+                    android:textColor="@color/c_8C9AA3"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/membersNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:textColor="@color/c_001A2B"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/membersApplyNumIv"
+                    app:layout_constraintRight_toLeftOf="@+id/membersApplyNumTv"
+                    app:layout_constraintTop_toTopOf="@+id/membersApplyNumIv" />
+
+                <TextView
+                    android:id="@+id/membersApplyNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:background="@drawable/shape_ff673d_9"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_11"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/membersApplyNumIv"
+                    app:layout_constraintRight_toLeftOf="@+id/membersApplyNumIv"
+                    app:layout_constraintTop_toTopOf="@+id/membersApplyNumIv" />
+
+                <ImageView
+                    android:id="@+id/membersApplyNumIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:src="@mipmap/icon_more_right"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/team_members"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/team_members" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:layout_marginLeft="@dimen/dp_26"
+        android:layout_marginRight="@dimen/dp_26"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:background="@drawable/shape_0071bc_12"
+        android:gravity="center"
+        android:text="@string/apply_add"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

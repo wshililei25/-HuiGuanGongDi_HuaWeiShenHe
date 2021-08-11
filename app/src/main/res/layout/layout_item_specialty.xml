@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dp_26"
+    android:paddingTop="@dimen/dp_19"
+    android:paddingRight="@dimen/dp_26"
+    android:paddingBottom="@dimen/dp_19"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_8C9AA3"
+        android:textSize="@dimen/sp_15" />
+</androidx.constraintlayout.widget.ConstraintLayout>

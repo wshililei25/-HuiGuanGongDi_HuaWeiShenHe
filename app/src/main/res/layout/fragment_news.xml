@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints">
+
+    <com.huiguangongdi.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isShowBack="false"
+        app:isShowLine="true"
+        app:rightText=""
+        app:title="@string/news" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/systemNewsV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar">
+
+        <ImageView
+            android:id="@+id/systemIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/system_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="@string/system_news"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/systemIv"
+            app:layout_constraintLeft_toRightOf="@+id/systemIv"
+            app:layout_constraintTop_toTopOf="@+id/systemIv" />
+
+        <TextView
+            android:id="@+id/systemNewsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_oval_ff673d_20"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/systemIv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/systemIv" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/c_B5C7D3"
+            app:layout_constraintLeft_toRightOf="@+id/systemIv"
+            app:layout_constraintTop_toBottomOf="@+id/systemIv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/projectNewsV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/systemNewsV">
+
+        <ImageView
+            android:id="@+id/projectIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/project_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="@string/project_news"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/projectIv"
+            app:layout_constraintLeft_toRightOf="@+id/projectIv"
+            app:layout_constraintTop_toTopOf="@+id/projectIv" />
+
+        <TextView
+            android:id="@+id/projectNewsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_oval_ff673d_20"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/projectIv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/projectIv" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/c_B5C7D3"
+            app:layout_constraintLeft_toRightOf="@+id/projectIv"
+            app:layout_constraintTop_toBottomOf="@+id/projectIv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toDoNewsV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/projectNewsV">
+
+        <ImageView
+            android:id="@+id/toDoIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/personal_to_do" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="@string/personal_to_do"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/toDoIv"
+            app:layout_constraintLeft_toRightOf="@+id/toDoIv"
+            app:layout_constraintTop_toTopOf="@+id/toDoIv" />
+
+        <TextView
+            android:id="@+id/toDoNewsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_oval_ff673d_20"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/toDoIv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toDoIv" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/c_B5C7D3"
+            app:layout_constraintLeft_toRightOf="@+id/toDoIv"
+            app:layout_constraintTop_toBottomOf="@+id/toDoIv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/personalNewsV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/toDoNewsV">
+
+        <ImageView
+            android:id="@+id/personalIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/personal_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:text="@string/personal_news"
+            android:textColor="@color/c_001A2B"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/personalIv"
+            app:layout_constraintLeft_toRightOf="@+id/personalIv"
+            app:layout_constraintTop_toTopOf="@+id/personalIv" />
+
+        <TextView
+            android:id="@+id/personalNewsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_oval_ff673d_20"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/personalIv"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/personalIv" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_0.5"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/c_B5C7D3"
+            app:layout_constraintLeft_toRightOf="@+id/personalIv"
+            app:layout_constraintTop_toBottomOf="@+id/personalIv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

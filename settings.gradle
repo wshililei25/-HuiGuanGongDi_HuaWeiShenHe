@@ -1,0 +1,10 @@
+include ':picture_library'
+include ':ucrop'
+include ':ucrop'
+include ':zxinglib'
+include ':image_module'
+include ':pickerview'
+include ':wheelview'
+include ':dialog'
+include ':app'
+rootProject.name = "HuiGuanGongDi"

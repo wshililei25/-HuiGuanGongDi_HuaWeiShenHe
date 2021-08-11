@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_9"
+    android:layout_marginRight="@dimen/dp_9"
+    android:layout_marginBottom="@dimen/dp_30"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_7">
+
+        <TextView
+            android:id="@+id/takePictureTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="@string/take_picture"
+            android:textColor="@color/c_0071BC"
+            android:textSize="@dimen/sp_15" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="@color/c_979797"
+            app:layout_constraintTop_toBottomOf="@+id/takePictureTv" />
+
+        <TextView
+            android:id="@+id/albumTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center"
+            android:text="@string/album"
+            android:textColor="@color/c_0071BC"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/cancelTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_8"
+        android:background="@drawable/shape_white_7"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/c_B2B2B2"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintTop_toBottomOf="@+id/topV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

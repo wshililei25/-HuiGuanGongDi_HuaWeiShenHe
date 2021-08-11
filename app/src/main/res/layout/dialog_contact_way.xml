@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_9"
+    android:layout_marginRight="@dimen/dp_9"
+    android:layout_marginBottom="@dimen/dp_30"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/mobileTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="@string/company_mobile"
+        android:background="@drawable/shape_white_7"
+        android:textColor="@color/c_0071BC"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cancelTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:background="@drawable/shape_white_7"
+        android:textColor="@color/c_B2B2B2"
+        android:textSize="@dimen/sp_15"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintTop_toBottomOf="@+id/mobileTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

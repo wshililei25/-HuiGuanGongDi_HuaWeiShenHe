@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="MissingConstraints">
+
+    <com.huiguangongdi.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isShowLine="true"
+        app:rightText=""
+        app:title="@string/security_management_detail" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_30"
+                android:paddingRight="@dimen/dp_20">
+
+                <TextView
+                    android:id="@+id/nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/c_001A2B"
+                    android:textSize="@dimen/sp_22"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/specialtyTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:background="@drawable/shape_white_3480ff_4"
+                    android:paddingLeft="@dimen/dp_6"
+                    android:paddingRight="@dimen/dp_6"
+                    android:textColor="@color/c_3480FF"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@+id/nameTv"
+                    app:layout_constraintLeft_toRightOf="@+id/nameTv"
+                    app:layout_constraintTop_toTopOf="@+id/nameTv" />
+
+                <ImageView
+                    android:id="@+id/addressIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:src="@mipmap/icon_position"
+                    app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+                <TextView
+                    android:id="@+id/addressTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:textColor="@color/c_8C9AA3"
+                    android:textSize="@dimen/sp_13"
+                    app:layout_constraintBottom_toBottomOf="@+id/addressIv"
+                    app:layout_constraintLeft_toRightOf="@+id/addressIv"
+                    app:layout_constraintTop_toTopOf="@+id/addressIv" />
+
+                <TextView
+                    android:id="@+id/remarkTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_6"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@drawable/shape_ffefeb_4"
+                    android:paddingLeft="@dimen/dp_4"
+                    android:paddingTop="@dimen/dp_3"
+                    android:paddingRight="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:textColor="@color/c_FF673D"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toRightOf="@+id/addressIv"
+                    app:layout_constraintTop_toBottomOf="@+id/addressTv" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/remarkTv"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/nameTv">
+
+                    <ImageView
+                        android:id="@+id/statusIv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/statusTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c_FF673D"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/dayTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:drawableLeft="@mipmap/icon_time"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/c_8C9AA3"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintTop_toBottomOf="@+id/remarkTv" />
+
+                <TextView
+                    android:id="@+id/peopleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:drawableLeft="@mipmap/icon_people"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/c_3480FF"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintLeft_toRightOf="@+id/dayTv"
+                    app:layout_constraintTop_toBottomOf="@+id/remarkTv" />
+
+                <TextView
+                    android:id="@+id/schemeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:background="@drawable/shape_f5fafd_6"
+                    android:paddingLeft="@dimen/dp_12"
+                    android:paddingTop="@dimen/dp_14"
+                    android:paddingRight="@dimen/dp_12"
+                    android:paddingBottom="@dimen/dp_14"
+                    android:textColor="@color/c_0071BC"
+                    android:textSize="@dimen/sp_13"
+                    app:layout_constraintTop_toBottomOf="@+id/peopleTv" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@color/c_9598A8"
+                    app:layout_constraintTop_toBottomOf="@+id/schemeTv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn"
+                app:layout_constraintTop_toBottomOf="@+id/topV"
+                app:layout_constraintVertical_weight="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:layout_marginLeft="@dimen/dp_26"
+        android:layout_marginRight="@dimen/dp_26"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:background="@drawable/shape_0071bc_12"
+        android:gravity="center"
+        android:text="@string/verification_sub"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verificationV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_26"
+        android:layout_marginRight="@dimen/dp_26"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/refuseBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginRight="@dimen/dp_8"
+            android:background="@drawable/shape_ff673d_12"
+            android:gravity="center"
+            android:text="@string/refuses"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/passBtn" />
+
+        <TextView
+            android:id="@+id/passBtn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:background="@drawable/shape_0071bc_12"
+            android:gravity="center"
+            android:text="@string/pass"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/refuseBtn"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
